@@ -12,3 +12,6 @@ This is how you would rename a file
 
 git log -p -2
 Shows what how the files changed over the course of the last two commits
+
+git push origin master
+when you want to publish your stuff
