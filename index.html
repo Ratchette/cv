@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		 <script src="http://code.jquery.com/jquery-latest.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Paprika' rel='stylesheet' type='text/css'>
+		<title>Jennifer's CV</title>
+		<script>
+			function cvView(){
+				$('.aboutPage').css("display","none")
+				$('.cvPage').css("display","block")
+				$(".cvPage").css("visibility","visible");
+			}
+			function aboutView(){
+				$('.aboutPage').css("display","block")
+				$('.cvPage').css("display","none")
+			}
+		</script>
+	</head>
+	<body>
+		<section class="page">
+			<div id="aboutDivider" class="tab">
+				<input id="aboutTab" type="radio" name="radio-set" class="tabSelector" onclick="aboutView()"/>
+				<label for="aboutTab" class="tab-label-2">About Me</label>
+			</div>
+			<div id="spacer" class="tab"></div>
+			<div id="cvDivider" class="tab">
+				<input id="cvTab" type="radio" name="radio-set" class="tabSelector" checked="checked" onclick="cvView()"/>
+				<label for="cvTab" class="tab-label-1">Curriculum vitae</label>
+			</div>
+
+			<div style="clear:both"></div>
+
+			<div class="content">
+				<div class="cvPage">
+					<h1>Jennifer Winer's CV</h1>
+				</div>
+				<div class="aboutPage">
+					<h1>More Info</h1>
+				</div>
+			</div>
+
+		</section>
+	</body>
+</html>
+
