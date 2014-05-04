@@ -9,13 +9,39 @@ h1 {
 	margin:0;
 	padding:10px;
 	background-color: #53324D;
-	
 }
 
-img {
-	text-align: center;
+h2{
+	background-color: #2658A9;
+	padding:5px;
 }
 
-#wrapper{
-	/*width:720px;*/
+table{
+	width: 500px;
+}
+td{
+	padding:5px;
+	border-bottom: 1px dashed #FFFFFF;
+}
+
+/********************************/
+
+#main-page{
+	width:730px;
+	padding:0 20px;
+	margin-top:20px;
+}
+
+#left-column{
+	width:500px;
+	float:left;
+	padding: 0 10px;
+	background: #205768;
+}
+
+#right-column{
+	width:180px;
+	float: right;
+	background: #333333;
+	padding: 0 10px;
 }
