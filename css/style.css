@@ -35,12 +35,33 @@ h4{
 	font-weight: bold;
 }
 
+table, tr, td, th{
+	margin:0;
+}
+table{
+	padding: 10px 0;
+}
+th{
+	text-align: center;
+}
+td{
+	padding: 5px 20px;
+}
+
+a{
+	text-decoration: none;
+}
+
+label{
+	padding: 10px 0 0 0;
+	display: inline-block;
+	width: 150px;
+}
 /****************************************/
 
 #container{
 	width: 960px;
 }
-
 
 #header{
 	width: 960px;
@@ -171,5 +192,9 @@ Can alternatly use:
 #header h2 span .white-text{
 	....
 }
-
 */
+
+.dev-table th, .dev-table tr, .dev-table td{
+	font-size: 110%;
+	border-bottom: dashed black 1px;
+}
