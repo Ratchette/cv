@@ -5,6 +5,11 @@
   <title>Blue Developer Directory</title>
 
   <link rel='stylesheet' href='css/style.css' type='text/css'>
+  <script>
+    function updateTextInput(val){
+      document.getElementById('budget-number').value = val;
+    }
+  </script>
 </head>
 
 <body>
@@ -41,6 +46,7 @@
     <section>
       <h3>Contact Us</h3>
       <p>Please use this form to contact a member of our website team</p>
+
       <form method="post" action="somescript.php">
         <p>
           <label for="name">Full Name:</label>
@@ -48,11 +54,11 @@
         </p>
         <p>
           <label for="email">Email Address: </label>
-          <input type="text" name="email">
+          <input type="email" name="email">
         </p>
         <p>
           <label for="phone">Phone Number: </label>
-          <input type="text" name="phone">
+          <input type="tel" name="phone">
         </p>
         <p>
           <label for="call">Best Time To Call: </label>
@@ -61,33 +67,58 @@
           <input type="radio" name="time" value="evening">Evening
         </p>
         <p>
-          <label for="budget">Budget: </label>
-          <select type="list" name="budget">
-            <option>--Please Select--</option>
-            <option value="100-500">$100 - $500</option>
-            <option value="500-1000">$500 - $1000</option>
-            <option value="1000-2000">$1000 - $2000</option>
-            <option value="2000+">$2000+</option>
-            <option value="not sure">Not Sure</option>
-          </select>
+          <label for='location'>Location</label>
+          <input list='location'>
+            <datalist id='location'>
+              <option value='Toronto'/>
+              <option value='Guelph'/>
+              <option value='Waterloo'/>
+              <option value='Boston'/>
+              <option value='New York'/>
+            </datalist>
+          </input>
         </p>
-        <p>
-          <label for="call">Services Needed: (Check all that apply) </label>
-          <table>
-            <tr>
-              <td><input type="checkbox" name="services" value="html">html</td>
-              <td><input type="checkbox" name="services" value="php">PHP</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="services" value="asp">ASP</td>
-              <td><input type="checkbox" name="services" value="java">Java</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" name="services" value="c">C++</td>
-              <td><input type="checkbox" name="services" value="design">Design</td>
-            </tr>
-          </table>
-        </p>
+        <fieldset>
+          <legend>About your project</legend>
+          <p>
+            <label for="budget">Budget: </label>
+            <input type='range' name='budget' min='500' max='10000' onchange='updateTextInput(this.value);'>
+            <input id='budget-number' type='text'>
+          </p>
+          <p>
+            <label for="call">Services Needed: (Check all that apply) </label>
+            <table>
+              <tr>
+                <td><input type="checkbox" name="services" value="html">html</td>
+                <td><input type="checkbox" name="services" value="php">PHP</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="services" value="asp">ASP</td>
+                <td><input type="checkbox" name="services" value="java">Java</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="services" value="c">C++</td>
+                <td><input type="checkbox" name="services" value="design">Design</td>
+              </tr>
+            </table>
+          </p>
+          <p>
+            <label for='website'>Current Website: </label>
+            <input name='website' type='url'/> 
+          </p>
+          <p>
+            <label for='start'>Start Date: </label>
+            <input name='start' type='date'/>
+          </p>
+          <p>
+            <label for='pages'>Pages: </label>
+            <input name='pages' type='number'/>
+          </p>
+          <p>
+            <label for='color'>Color: </label>
+            <input name='color' type='color'/>
+          </p>
+        </fieldset>
         <p>
           <input type="submit" value="Submit Inquiry">
         </p>

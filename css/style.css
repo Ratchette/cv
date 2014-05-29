@@ -57,6 +57,10 @@ label{
 	display: inline-block;
 	width: 150px;
 }
+
+fieldset{
+	margin: 15px;
+}
 /****************************************/
 
 #container{
