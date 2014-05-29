@@ -63,18 +63,18 @@ label{
 	width: 960px;
 }
 
-#header{
+header{
 	width: 960px;
 	height: 85px;
 }
-#header h1{
+header h1{
 	padding: 20px 0 0 20px;
 	float: left;
 
 	color: #FFFFFF;
 	font-size: 43px;
 }
-#header h2{
+header h2{
 	float: right;
 	padding: 40px 20px 0 0;
 
@@ -145,7 +145,7 @@ label{
 	font-weight: bold;
 }
 
-.content{
+section{
 	margin: 15px 0 0 15px;
 	padding: 15px;
 	float: left;
@@ -174,9 +174,22 @@ label{
 	line-height: 1.7em;
 }
 
+footer{
+	margin: 20px 0;
+	padding: 10px 0;
+
+	text-align: center;
+	color:white;
+	background: #000000;
+}
+
+
 .float{
 	float: right;
 	margin: 15px;
+}
+.clear{
+	clear: both;
 }
 
 .blue-text{
@@ -189,7 +202,7 @@ label{
 
 /*
 Can alternatly use:
-#header h2 span .white-text{
+header h2 span .white-text{
 	....
 }
 */
