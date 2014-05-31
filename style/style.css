@@ -1,18 +1,194 @@
-body { 
-  margin: 0;
-  overflow: hidden;
-
-  color: white;
-  background: #000000;
+html, body {
+    /* The universe takes up all available space */
+    width: 100%;
+    height: 100%;
+    
+    /* The universe is black */
+    background-color: black;
 }
 
-a, a:visited, a:active, a:hover {
-  color: white; 
-  padding: 0px;
+#sun {
+    position: absolute;
+    /* Positions the top-left corner of the image to be *
+    /* in the middle of the box */
+    top: 50%;
+    left: 50%;
+    
+    /* Play with these numbers to see what it does */
+    height: 200px;
+    width: 200px;
+    margin-top: -108px; 
+    margin-left: -108px;
+    
+    background: yellow;
+    border: orange 8px solid;
+    border-radius: 50%;
+    
+    box-shadow: 0 0 128px red;
 }
 
-section {
-	width: 960px;
-	margin: 0 auto;
-	text-align: center;
+#earth {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    
+    height: 50px;
+    width: 50px;
+    margin: -25px 0 0  -25px;
+    
+    background: blue;
+    border-radius: 50%;
+}
+
+#earth-orbit {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    
+    width: 500px;
+    height: 500px;
+    margin: -250px 0 0 -250px;
+    
+    border: solid white 2px;
+    border-radius: 50%;
+    
+    -webkit-animation: spin-right 10s linear infinite;
+       -moz-animation: spin-right 10s linear infinite;
+        -ms-animation: spin-right 10s linear infinite;
+         -o-animation: spin-right 10s linear infinite;
+            animation: spin-right 10s linear infinite;
+}
+
+#moon{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    
+    width: 20px;
+    height: 20px;
+    margin: -14px 0 0 -14px;
+    
+    background: #666666;
+    border: solid 4px #999999;
+    border-radius: 50%;
+}
+#moon-orbit{
+    position: absolute;
+    top:0;
+    left:50%;
+    
+    height: 66px;
+    width: 66px;
+    margin: -35px 0 0 -35px;
+    border: solid white 2px;
+    border-radius: 50%;
+    
+    -webkit-animation: spin-right 2s linear infinite;
+       -moz-animation: spin-right 2s linear infinite;
+        -ms-animation: spin-right 2s linear infinite;
+         -o-animation: spin-right 2s linear infinite;
+            animation: spin-right 2s linear infinite;
+}
+#mars{
+    position:absolute;
+    top:50%;
+    left:0;
+    
+    height:50px;
+    width:50px;
+    margin: -25px 0 0 -25px;
+    
+    background: #990000;
+    border-radius: 50%;
+}
+#mars-orbit{
+    position: absolute;
+    top:50%;
+    left:50%;
+    
+    height: 600px;
+    width: 600px;
+    margin: -300px 0 0 -300px;
+    
+    border: solid 2px white;
+    border-radius: 50%;
+    
+    -webkit-animation: spin-right 20s linear infinite;
+       -moz-animation: spin-right 20s linear infinite;
+        -ms-animation: spin-right 20s linear infinite;
+         -o-animation: spin-right 20s linear infinite;
+            animation: spin-right 20s linear infinite;
+}
+
+#saturn{
+    position: absolute;
+    top: 50%;
+    left: 100%;
+
+    height: 80px;
+    width: 80px;
+    margin: -40px 0 0 -40px;
+    
+    background: orange;
+    border-radius: 50%;
+}
+#saturn-orbit{
+    position: absolute;
+    top:50%;
+    left:50%;
+    
+    height: 750px;
+    width: 750px;
+    margin: -375px 0 0 -375px;
+
+    border: white 2px solid;
+    border-radius: 50%;
+
+    -webkit-animation: spin-right 40s linear infinite;
+       -moz-animation: spin-right 40s linear infinite;
+        -ms-animation: spin-right 40s linear infinite;
+         -o-animation: spin-right 40s linear infinite;
+            animation: spin-right 40s linear infinite;
+    
+}
+#saturn-rings{
+    position: absolute;
+    top:50%;
+    left:100%;
+
+    height:100px;
+    width:16px;
+    margin: -55px 0 0 -13px;
+
+    border: green 5px solid;
+    border-radius: 50%;
+
+    -webkit-animation: spin-right 5s linear infinite;
+       -moz-animation: spin-right 5s linear infinite;
+        -ms-animation: spin-right 5s linear infinite;
+         -o-animation: spin-right 5s linear infinite;
+            animation: spin-right 5s linear infinite;
+}
+#saturn-rings-orbit{
+    
+}
+
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
