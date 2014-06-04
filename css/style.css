@@ -1,10 +1,18 @@
-body{
-	background: #999999;
+.dropbox{
+	padding: 10px;
+	margin: 20px;
+	float: left;
+
+	width: 240px;
+	height: 240px;
+	border: 1px #AAAAAA solid;
 }
 
-canvas{
-	margin: 10px;
-	padding: 10px;
-	background: #FFFFFF;
-	border: 1px solid #000000;
+#tetris{
+	float: left;
+}
+
+img{
+	height: 200px;
+	width: 200px;
 }

@@ -1,27 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html class='no-js'>
 <head>
 
   <meta charset="utf-8" />
   <!-- [if lt IE 9]>
   <script src='javascript/html5shiv.js'></script>
   <![endif]-->
+  <script type='text/javascript' src='javascript/modernizr.js'></script>
 
-  <script type='text/javascript' src='javascript/canvas.js'></script>
+  <!-- Enable drag and drop -->
+  <script type='text/javascript'>
+    if(window.FileReader && Modernizr.draganddrop){
+      function allowDrop(ev){
+        ev.preventDefault();
+      }
+
+      function drag(ev){
+        ev.dataTransfer.setData('text', ev.target.id);
+      }
+
+      function drop(ev){
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData('text');
+        ev.target.appendChild(document.getElementById(data));
+      }
+    } else {
+      document.write('This browser CANNOT use drag and drop');
+    }
+  </script>
+
   <link href='css/style.css' type='text/css' rel='stylesheet'>
 
-  <title>Canvas Sandbox</title>
+  <title>Drag and Drop Sandbox</title>
 </head>
 
-<body onload='makeCanvas()'>
-  <canvas id='canvas1' width='400' height='300'>Your browser does not support the canvas element.</canvas>
-  <br />
-  <canvas id='canvas2' width='400' height='300'>Your browser does not support the canvas element.</canvas>
-  <br />
-  <canvas id='canvas3' width='400' height='300'>Your browser does not support the canvas element.</canvas>
-  <br />
-  <canvas id='canvas4' width='400' height='300'>Your browser does not support the canvas element.</canvas>
-  <br />
-  <canvas id='canvas5' width='400' height='300'>Your browser does not support the canvas element.</canvas>
+<body>
+  <h1>Drag the HTML5 logo into the box below</h1>
+  <div class='dropbox' ondragover='allowDrop(event)' ondrop='drop(event)'></div>
+  <img id='tetris' src='images/true tetris.jpg' draggable='true' ondragstart='drag(event)'>
+
+  <div style='clear:both;'></div>
+  <div class='dropbox' ondragover='allowDrop(event)' ondrop='drop(event)'></div>
 </body>
 </html>
