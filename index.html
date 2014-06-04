@@ -16,13 +16,13 @@
       }
 
       function drag(ev){
-        ev.dataTransfer.setData('text', ev.target.id);
+        ev.dataTransfer.setData("text/imageID", ev.target.id);
       }
 
       function drop(ev){
         ev.preventDefault();
-        var data = ev.dataTransfer.getData('text');
-        ev.target.appendChild(document.getElementById(data));
+        var myImage = ev.dataTransfer.getData('text/imageID');
+        ev.target.appendChild(document.getElementById(myImage));
       }
     } else {
       document.write('This browser CANNOT use drag and drop');
@@ -36,12 +36,12 @@
 
 <body>
   <h1>Drag the HTML5 logo into the box below</h1>
-  <div class='dropbox' ondragover='allowDrop(event)' ondrop='drop(event)'>
+  <div class='dropbox' onDragOver='allowDrop(event)' onDrop='drop(event)'>
   </div>
-  <img id='tetris' src='images/true tetris.jpg' draggable='true' ondragstart='drag(event)' />
+  <img id='tetris' src='images/true tetris.jpg' draggable='true' onDragStart='drag(event)' />
   
 
   <div style='clear:both;'></div>
-  <div class='dropbox' ondragover='allowDrop(event)' ondrop='drop(event)'></div>
+  <div class='dropbox' onDragOver='allowDrop(event)' onDrop='drop(event)'></div>
 </body>
 </html>
