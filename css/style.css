@@ -61,6 +61,7 @@ label{
 fieldset{
 	margin: 15px;
 }
+
 /****************************************/
 
 #container{
@@ -214,4 +215,8 @@ header h2 span .white-text{
 .dev-table th, .dev-table tr, .dev-table td{
 	font-size: 110%;
 	border-bottom: dashed black 1px;
+}
+
+#ad-controls{
+	width: 400px;
 }
