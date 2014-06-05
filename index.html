@@ -1,47 +1,101 @@
 <!DOCTYPE html>
-<html class='no-js'>
+<html>
+
 <head>
+  <title>Blue Developer Directory</title>
 
-  <meta charset="utf-8" />
-  <!-- [if lt IE 9]>
-  <script src='javascript/html5shiv.js'></script>
-  <![endif]-->
-  <script type='text/javascript' src='javascript/modernizr.js'></script>
-
-  <!-- Enable drag and drop -->
-  <script type='text/javascript'>
-    if(window.FileReader && Modernizr.draganddrop){
-      function allowDrop(ev){
-        ev.preventDefault();
-      }
-
-      function drag(ev){
-        ev.dataTransfer.setData("text/imageID", ev.target.id);
-      }
-
-      function drop(ev){
-        ev.preventDefault();
-        var myImage = ev.dataTransfer.getData('text/imageID');
-        ev.target.appendChild(document.getElementById(myImage));
-      }
-    } else {
-      document.write('This browser CANNOT use drag and drop');
-    }
-  </script>
-
-  <link href='css/style.css' type='text/css' rel='stylesheet'>
-
-  <title>Drag and Drop Sandbox</title>
+  <link rel='stylesheet' href='css/style.css' type='text/css'>
 </head>
 
 <body>
-  <h1>Drag the HTML5 logo into the box below</h1>
-  <div class='dropbox' onDragOver='allowDrop(event)' onDrop='drop(event)'>
-  </div>
-  <img id='tetris' src='images/true tetris.jpg' draggable='true' onDragStart='drag(event)' />
-  
+  <div id='container'>
+    <header>
+      <h1><span class='blue-text'>Blue</span> Developer Directory</h1>
+      <h2>Find A Developer <span class='white-text'>NOW</span></h2>
+    </header>
 
-  <div style='clear:both;'></div>
-  <div class='dropbox' onDragOver='allowDrop(event)' onDrop='drop(event)'></div>
+    <nav id="menu">
+      <ul>
+        <li class="menuitem"><a href="index.html">Home</a></li>
+        <li class="menuitem"><a href="about.html">About Us</a></li>
+        <li class="menuitem"><a href="browse.html">Browse Developers</a></li>
+        <li class="menuitem"><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav> <!-- menu end -->
+
+    <nav id='sidebar'>
+      <h3>Links</h3>
+      <ul>
+        <li><a href="browse.html">SEO</a></li>
+        <li><a href="browse.html">PHP</a></li>
+        <li><a href="browse.html">Ajax</a></li>
+        <li><a href="browse.html">jQuery</a></li>
+        <li><a href="browse.html">Web design</a></li>
+        <li><a href="browse.html">Web Programming</a></li>
+        <li><a href="browse.html">Content Creation</a></li>
+        <li><a href="browse.html">Internet Marketing</a></li>
+        <li><a href="browse.html">XHTML Templates</a></li>
+      </ul>
+    </nav> <!-- sidebar end -->
+
+    <section>
+      <h2>Welcome to Blue Developer Directory! </h2>
+      <img class="float" src="images/web.jpg" alt="web developer directory">
+
+      <h3>Who Are We?</h3>
+      <p>We are a fictional website and service that list top web developers around the world. Search and browse fictional web developers on our website absolutley FREE!</p>
+
+      <h3>What Skills Do Our Developers Have?</h3>
+      <p>Our listed fictional web developers skill ranges from Graphic design with Photoshop, Illustrator and Fireworks to markup languages like HTML5, XHTML and XML to programming languages such as Javascript, PHP, Python and ASP</p>
+    </section>
+
+    <section>
+      <h2>Latest Blue Developers</h2>
+      <div class='developer'>
+        <h4>Adam Sullivan</h4>
+        <ul>
+          <li><strong>Location: </strong> Boston USA</li>
+          <li><strong>Skills: </strong> HTML/CSS, PHP, ROR</li>
+          <li><strong>Availability:</strong> Full-Time
+        </ul>
+        <a href="#">View Profile</a>
+      </div> <!-- developer end -->
+
+      <div class='developer'>
+        <h4>Rick Monroe</h4>
+        <ul>
+          <li><strong>Location: </strong> Boston USA</li>
+          <li><strong>Skills: </strong> HTML/CSS, PHP, ROR</li>
+          <li><strong>Availability:</strong> Full-Time
+        </ul>
+        <a href="#">View Profile</a>
+      </div> <!-- developer end -->
+
+      <div class='developer'>
+        <h4>Michael Oliver</h4>
+        <ul>
+          <li><strong>Location: </strong> Boston USA</li>
+          <li><strong>Skills: </strong> HTML/CSS, PHP, ROR</li>
+          <li><strong>Availability:</strong> Full-Time
+        </ul>
+        <a href="#">View Profile</a>
+      </div> <!-- developer end -->
+
+      <div class='developer'>
+        <h4>Megan Jennings</h4>
+        <ul>
+          <li><strong>Location: </strong> Boston USA</li>
+          <li><strong>Skills: </strong> HTML/CSS, PHP, ROR</li>
+          <li><strong>Availability:</strong> Full-Time
+        </ul>
+        <a href="#">View Profile</a>  
+      </div> <!-- developer end -->
+
+    </section>
+  </div> <!-- container end -->
+  <div class='clear'></div>
+  <footer>
+    Copyright 2014  Blue Developer Directory
+  </footer>
 </body>
-</html>
+</html> 
