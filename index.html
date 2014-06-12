@@ -1,83 +1,102 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <!-- [if lt IE 9]>
-  <script src='javascript/html5shiv.js'></script>
-  <![endif]-->
-  <script type='text/javascript' src='javascript/modernizr.js'></script>
 
-  <link href='css/style.css' type='text/css' rel='stylesheet'>
-  <title>SVG Shapes</title>
+<head>
+  <title>Blue Developer Directory</title>
+
+  <link rel='stylesheet' href='css/style.css' type='text/css'>
 </head>
 
 <body>
-  <h1>Below are some examples of SVG shapes</h1>
+  <div id='container'>
+    <header>
+      <h1><span class='blue-text'>Blue</span> Developer Directory</h1>
+      <h2>Find A Developer <span class='white-text'>NOW</span></h2>
+    </header>
 
-  <svg height='200' xmlns='http://www.w3.org/2000/svg'>
-    <rect id='redrect' x='20' y='10' width='100' height='100' fill='#FF0000'/>
-    <animate 
-      attributeName='x'    
-      xlink:href='#redrect'  
-      begin='0s'
-      dur='5s'
-      from='30'
-      to='500'
+    <nav id="menu">
+      <ul>
+        <li class="menuitem"><a href="index.html">Home</a></li>
+        <li class="menuitem"><a href="about.html">About Us</a></li>
+        <li class="menuitem"><a href="browse.html">Browse Developers</a></li>
+        <li class="menuitem"><a href="register.html">Register As Developer</a></li>
+        <li class="menuitem"><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav> <!-- menu end -->
 
-      repeatCount='indefinite'
-    />
-    <animate 
-      attributeName='y'    
-      xlink:href='#redrect'  
-      begin='0s'
-      dur='5s'
-      from='20'
-      to='50'
+    <nav id='sidebar'>
+      <h3>Links</h3>
+      <ul>
+        <li><a href="browse.html">SEO</a></li>
+        <li><a href="browse.html">PHP</a></li>
+        <li><a href="browse.html">Ajax</a></li>
+        <li><a href="browse.html">jQuery</a></li>
+        <li><a href="browse.html">Web design</a></li>
+        <li><a href="browse.html">Web Programming</a></li>
+        <li><a href="browse.html">Content Creation</a></li>
+        <li><a href="browse.html">Internet Marketing</a></li>
+        <li><a href="browse.html">XHTML Templates</a></li>
+      </ul>
+    </nav> <!-- sidebar end -->
 
-      fill='freeze'
-    />
-  </svg>
+    <section>
+      <h2>Welcome to Blue Developer Directory! </h2>
+      <img class="float" src="images/web.jpg" alt="web developer directory">
 
-  <svg height='130' xmlns='http://www.w3.org/2000/svg'>
-    <circle id='circle1' cx='70' cy='70' r='50' fill='blue' />
-    <animate
-      attributeName='cx'
-      xlink:href='#circle1'
-      begin='0s'
-      dur='5s'
-      from='30'
-      to='500'
-      fill='freeze'
-    />
-    <animate
-      attributeName='fill'
-      xlink:href='#circle1'
-      begin='5s'
-      dur='10s'
-      values='blue; orange; yellow; green; red; indigo; violet'
-      repeatCount='indefinite'
-    />
-  </svg>
+      <h3>Who Are We?</h3>
+      <p>We are a fictional website and service that list top web developers around the world. Search and browse fictional web developers on our website absolutley FREE!</p>
 
-  <svg height='200' xmlns='http://www.w3.org/2000/svg'>
-    <rect id='redrect2' x='20' y='10' width='100' height='100' fill='#FF0000'/>
-    <animate 
-      attributeName='width'
-      xlink:href='#redrect2'
-      begin='0s'
-      dur='5s'
-      from='100'
-      to='580'
-      fill='freeze'
-    />
-  </svg>
+      <h3>What Skills Do Our Developers Have?</h3>
+      <p>Our listed fictional web developers skill ranges from Graphic design with Photoshop, Illustrator and Fireworks to markup languages like HTML5, XHTML and XML to programming languages such as Javascript, PHP, Python and ASP</p>
+    </section>
 
-  <svg height='100' xmlns='http://www.w3.org/2000/svg'>
-    <line x1='0' y1='0' x2='200' y2='60' style='stroke:grey; stroke-width:2;'/>  
-  </svg>
+    <section>
+      <h2>Latest Blue Developers</h2>
+      <div class='developer'>
+        <h4>Adam Sullivan</h4>
+        <ul>
+          <li><strong>Location: </strong> Boston USA</li>
+          <li><strong>Skills: </strong> HTML/CSS, PHP, ROR</li>
+          <li><strong>Availability:</strong> Full-Time
+        </ul>
+        <a href="#">View Profile</a>
+      </div> <!-- developer end -->
 
-  <svg height='200' xmlns='http://www.w3.org/2000/svg'>
-    <polygon points='20, 10, 300, 20, 170, 50' fill='#00FF00' />
-  </svg>
+      <div class='developer'>
+        <h4>Rick Monroe</h4>
+        <ul>
+          <li><strong>Location: </strong> Boston USA</li>
+          <li><strong>Skills: </strong> HTML/CSS, PHP, ROR</li>
+          <li><strong>Availability:</strong> Full-Time
+        </ul>
+        <a href="#">View Profile</a>
+      </div> <!-- developer end -->
+
+      <div class='developer'>
+        <h4>Michael Oliver</h4>
+        <ul>
+          <li><strong>Location: </strong> Boston USA</li>
+          <li><strong>Skills: </strong> HTML/CSS, PHP, ROR</li>
+          <li><strong>Availability:</strong> Full-Time
+        </ul>
+        <a href="#">View Profile</a>
+      </div> <!-- developer end -->
+
+      <div class='developer'>
+        <h4>Megan Jennings</h4>
+        <ul>
+          <li><strong>Location: </strong> Boston USA</li>
+          <li><strong>Skills: </strong> HTML/CSS, PHP, ROR</li>
+          <li><strong>Availability:</strong> Full-Time
+        </ul>
+        <a href="#">View Profile</a>  
+      </div> <!-- developer end -->
+
+    </section>
+  </div> <!-- container end -->
+  <div class='clear'></div>
+  <footer>
+    Copyright 2014  Blue Developer Directory
+  </footer>
 </body>
 </html> 

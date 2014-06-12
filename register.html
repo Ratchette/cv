@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blue Developer Directory</title>
+
+	<link type='text/css' rel='stylesheet' href='css/style.css'>
+	<script type='text/javascript' src='javascript/geolocation.js'></script>
+	<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js"></script>
+</head>
+<body>
+	<div id='container'>
+    <header>
+      <h1><span class='blue-text'>Blue</span> Developer Directory</h1>
+      <h2>Find A Developer <span class='white-text'>NOW</span></h2>
+    </header>
+
+    <nav id="menu">
+      <ul>
+        <li class="menuitem"><a href="index.html">Home</a></li>
+        <li class="menuitem"><a href="about.html">About Us</a></li>
+        <li class="menuitem"><a href="browse.html">Browse Developers</a></li>
+        <li class="menuitem"><a href="register.html">Register As Developer</a></li>
+        <li class="menuitem"><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav> <!-- menu end -->
+
+    <nav id='sidebar'>
+      <h3>Links</h3>
+      <ul>
+        <li><a href="browse.html">SEO</a></li>
+        <li><a href="browse.html">PHP</a></li>
+        <li><a href="browse.html">Ajax</a></li>
+        <li><a href="browse.html">jQuery</a></li>
+        <li><a href="browse.html">Web design</a></li>
+        <li><a href="browse.html">Web Programming</a></li>
+        <li><a href="browse.html">Content Creation</a></li>
+        <li><a href="browse.html">Internet Marketing</a></li>
+        <li><a href="browse.html">XHTML Templates</a></li>
+      </ul>
+    </nav> <!-- sidebar end -->
+
+    <section>
+      <h3>Register As A Developer</h3>
+      <p>Please use this form to contact a member of our website team</p>
+
+      <form method='post' action='somescript.php'>
+      	<p>
+      		<label for='first-name'>First Name:</label>
+      		<input type='text' name='first-name'/>
+      	</p>
+
+      	<p>
+      		<label for='last-name'>Last Name:</label>
+      		<input type='text' name='last-name'/>
+      	</p>
+
+      	<p>
+      		<label for='email'>Email:</label>
+      		<input type='text' name='email'/>
+      	</p>
+
+      	<p>
+      		<label for='location'>Location:</label>
+      		<div id='map'></div>
+      	</p>
+
+      	<p style='margin-top:15px;clear:both;'>
+      		<input type='submit' value='Register'/>
+      	</p>
+      </form>
+      <script>
+      	showLocation();
+      </script>
+
+    </section>
+  </div> <!-- container end -->
+  <div class='clear'></div>
+  <footer>
+    Copyright 2014  Blue Developer Directory
+  </footer>
+</body>
+</html>
