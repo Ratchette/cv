@@ -35,6 +35,10 @@ h4{
 	font-weight: bold;
 }
 
+p{
+	margin: 10px 0;
+}
+
 table, tr, td, th{
 	margin:0;
 }
@@ -226,4 +230,27 @@ header h2 span .white-text{
 	width: 400px;
 	height: 250px;
 	float: left;
+}
+
+aside{
+	color: #FFFFFF;
+}
+
+/* NEW HTML5 selector */
+aside input[type='text'], aside input[type='email']{
+	margin: 0 0 15px 0;
+}
+
+#welcome-message{
+	color: #FFFFFF;
+	float: right;
+	padding: 0 10px 0 0;
+
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#newsletter a{
+	margin: 0 0 0 20px;
+	font-size:16px;
 }

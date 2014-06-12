@@ -2,10 +2,13 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
   <title>Blue Developer Directory</title>
 
   <link rel='stylesheet' href='css/style.css' type='text/css'>
+  <script type='text/javascript' src='javascript/newsletter.js'></script>
 </head>
+
 
 <body>
   <div id='container'>
@@ -22,22 +25,42 @@
         <li class="menuitem"><a href="register.html">Register As Developer</a></li>
         <li class="menuitem"><a href="contact.html">Contact Us</a></li>
       </ul>
+      <div id='welcome-message'><script>displayName();</script></div>
     </nav> <!-- menu end -->
 
-    <nav id='sidebar'>
-      <h3>Links</h3>
-      <ul>
-        <li><a href="browse.html">SEO</a></li>
-        <li><a href="browse.html">PHP</a></li>
-        <li><a href="browse.html">Ajax</a></li>
-        <li><a href="browse.html">jQuery</a></li>
-        <li><a href="browse.html">Web design</a></li>
-        <li><a href="browse.html">Web Programming</a></li>
-        <li><a href="browse.html">Content Creation</a></li>
-        <li><a href="browse.html">Internet Marketing</a></li>
-        <li><a href="browse.html">XHTML Templates</a></li>
-      </ul>
-    </nav> <!-- sidebar end -->
+    <aside>
+      <nav id='sidebar'>
+        <h3>Links</h3>
+        <ul>
+          <li><a href="browse.html">SEO</a></li>
+          <li><a href="browse.html">PHP</a></li>
+          <li><a href="browse.html">Ajax</a></li>
+          <li><a href="browse.html">jQuery</a></li>
+          <li><a href="browse.html">Web design</a></li>
+          <li><a href="browse.html">Web Programming</a></li>
+          <li><a href="browse.html">Content Creation</a></li>
+          <li><a href="browse.html">Internet Marketing</a></li>
+          <li><a href="browse.html">XHTML Templates</a></li>
+        </ul>
+        
+        <br /><br />
+        <div id='newsletter-signup'>
+          <h3>Newsletter</h3>
+          <script>displayEmail()</script>
+
+          <form id='newsletter' onsubmit='initNewsletterStorage()'>
+            <label for='newsletter-name'>Name: </label>
+            <input id='newsletter-name' name='newsletter-name' type='text'/>
+
+            <label for='newsletter-email'>Email: </label>
+            <input id='newsletter-email' name='newsletter-email' type='email'/>
+
+            <input type='submit' value='Subscribe'/>
+            <a href='#' onclick='clearStorage()'>clear</a>
+          </form>
+        </div>
+      </nav>
+    </aside> <!-- sidebar end -->
 
     <section>
         <h2>Blue Developer Directory! </h2>
