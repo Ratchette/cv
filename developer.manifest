@@ -1,0 +1,20 @@
+CACHE MANIFEST
+# June 12, 2014
+
+CACHE:
+index.html
+info.html
+css/style.css
+images/background.png
+images/web.jpg
+
+
+# require the user to be online to view
+NETWORK:
+register.html
+login.php
+
+
+# If the user requests a file that is not in the cache, serve this file instead
+FALLBACK:
+*.html offline.html
